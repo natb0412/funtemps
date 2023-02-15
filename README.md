@@ -61,4 +61,4 @@ for _, tc := range tests {
 ## Referanser 
 Gerardi, R. (2021, December 21). Testing Floating Point Numbers in Go - The Pragmatic Programmers - Medium. Medium; The Pragmatic Programmers. https://medium.com/pragmatic-programmers/testing-floating-point-numbers-in-go-9872fe6de17f
 
-‌Endringeeeeeeeeeeeer
+‌Endringeeeeeeeeeeeer2
