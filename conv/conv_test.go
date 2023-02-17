@@ -1,36 +1,119 @@
 package conv
 
 import (
-	"reflect"
 	"testing"
 )
 
-/*
-*
-
-	Mal for testfunksjoner
-	Du skal skrive alle funksjonene basert på denne malen
-	For alle konverteringsfunksjonene (tilsammen 6)
-	kan du bruke malen som den er (du må selvsagt endre
-	funksjonsnavn og testverdier)
-*/
-func TestFarhenheitToCelsius(t *testing.T) {
+func TestFahrenheitToCelsius(t *testing.T) {
 	type test struct {
-		input float64
-		want  float64
+		input  float64
+		want   float64
+		margin float64
 	}
 
 	tests := []test{
-		{input: 134, want: 56.67},
+		{input: 134, want: 56.67, margin: 1},
 	}
 
 	for _, tc := range tests {
-		got := FarhenheitToCelsius(tc.input)
-		if !reflect.DeepEqual(tc.want, got) {
-			t.Errorf("expected: %v, got: %v", tc.want, got)
+		got := FahrenheitToCelsius(tc.input)
+		if got < tc.want-tc.margin || got > tc.want+tc.margin {
+			t.Errorf("input: %v, expected: %v +/- %v, but got: %v", tc.input, tc.want, tc.margin, got)
 		}
 	}
 }
 
-// De andre testfunksjonene implementeres her
-// ...
+func TestCelsiusToFarhenheit(t *testing.T) {
+	type test struct {
+		input  float64
+		want   float64
+		margin float64
+	}
+
+	tests := []test{
+		{input: 134, want: 56.67, margin: 1},
+	}
+
+	for _, tc := range tests {
+		got := FahrenheitToCelsius(tc.input)
+		if got < tc.want-tc.margin || got > tc.want+tc.margin {
+			t.Errorf("input: %v, expected: %v +/- %v, but got: %v", tc.input, tc.want, tc.margin, got)
+		}
+	}
+}
+
+func TestFahrenheitToKelvin(t *testing.T) {
+	type test struct {
+		input  float64
+		want   float64
+		margin float64
+	}
+
+	tests := []test{
+		{input: 50, want: 283.15, margin: 1},
+	}
+
+	for _, tc := range tests {
+		got := FahrenheitToKelvin(tc.input)
+		if got < tc.want-tc.margin || got > tc.want+tc.margin {
+			t.Errorf("input: %v, expected: %v +/- %v, but got: %v", tc.input, tc.want, tc.margin, got)
+		}
+	}
+}
+
+func TestKelvinToFahrenheit(t *testing.T) {
+	type test struct {
+		input  float64
+		want   float64
+		margin float64
+	}
+
+	tests := []test{
+		{input: 283.15, want: 50, margin: 1},
+	}
+
+	for _, tc := range tests {
+		got := KelvinToFahrenheit(tc.input)
+		if got < tc.want-tc.margin || got > tc.want+tc.margin {
+			t.Errorf("input: %v, expected: %v +/- %v, but got: %v", tc.input, tc.want, tc.margin, got)
+		}
+	}
+}
+
+func TestKelvinToCelsius(t *testing.T) {
+	type test struct {
+		input  float64
+		want   float64
+		margin float64
+	}
+
+	tests := []test{
+		{input: 1, want: -272.15, margin: 1},
+	}
+
+	for _, tc := range tests {
+		got := KelvinToCelsius(tc.input)
+		if got < tc.want-tc.margin || got > tc.want+tc.margin {
+			t.Errorf("input: %v, expected: %v +/- %v, but got: %v", tc.input, tc.want, tc.margin, got)
+		}
+	}
+}
+
+func TestCelsiusToKelvin(t *testing.T) {
+	type test struct {
+		input  float64
+		want   float64
+		margin float64
+	}
+
+	tests := []test{
+		{input: 20, want: 293.15, margin: 1},
+	}
+
+	for _, tc := range tests {
+		got := CelsiusToKelvin(tc.input)
+		if got < tc.want-tc.margin || got > tc.want+tc.margin {
+			t.Errorf("input: %v, expected: %v +/- %v, but got: %v", tc.input, tc.want, tc.margin, got)
+		}
+	}
+}
