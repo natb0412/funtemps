@@ -19,7 +19,7 @@ func init() {
 	flag.Float64Var(&F, "F", 0.0, "temperatur i grader fahrenheit")
 	flag.Float64Var(&C, "C", 0.0, "Temperatur i Celsius")
 	flag.Float64Var(&K, "K", 0.0, "Temperatur i Kelvin")
-	flag.StringVar(&out, "out", "C", "beregne temperatur i C - celsius, F - farhenheit, K- Kelvin")
+	flag.StringVar(&out, "out", "A", "beregne temperatur i C - celsius, F - farhenheit, K- Kelvin")
 	flag.StringVar(&funfacts, "funfacts", "sun", "\"fun-facts\" om sun - Solen, luna - Månen og terra - Jorden")
 
 }

@@ -23,7 +23,7 @@ func TestFahrenheitToCelsius(t *testing.T) {
 	}
 }
 
-func TestCelsiusToFarhenheit(t *testing.T) {
+func TestCelsiusToFahrenheit(t *testing.T) {
 	type test struct {
 		input  float64
 		want   float64
@@ -31,11 +31,11 @@ func TestCelsiusToFarhenheit(t *testing.T) {
 	}
 
 	tests := []test{
-		{input: 134, want: 56.67, margin: 1},
+		{input: 20, want: 68.00, margin: 1},
 	}
 
 	for _, tc := range tests {
-		got := FahrenheitToCelsius(tc.input)
+		got := CelsiusToFahrenheit(tc.input)
 		if got < tc.want-tc.margin || got > tc.want+tc.margin {
 			t.Errorf("input: %v, expected: %v +/- %v, but got: %v", tc.input, tc.want, tc.margin, got)
 		}
