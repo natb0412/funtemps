@@ -36,7 +36,7 @@ func main() {
 	}
 
 	// Parse output scale
-	outputScale := flag.Lookup("out").Value.String()
+	outputScale := out
 
 	// Convert temperature
 	var outputValue float64
