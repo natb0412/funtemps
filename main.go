@@ -31,7 +31,7 @@ func main() {
 	inputScale := flag.Arg(0)
 	inputValue, err := strconv.ParseFloat(flag.Arg(1), 64)
 	if err != nil {
-		fmt.Println("Invalid input temperature value")
+		fmt.Println("Example input template: funtemps -out=F K 250")
 		return
 	}
 
