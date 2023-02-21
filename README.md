@@ -1,7 +1,7 @@
 Skoleopppgave for konvertering av temperaturer mellom Kelvin, Fahrenheit, og Celsius.
 
 Input eksempel: funtemps -out=F K 273.15
-Spørsamål rettes til nabjerrega@uia.no
+Spørsmål rettes til nabjerrega@uia.no
 
 
 ## Referanser 
